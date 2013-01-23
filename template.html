@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+    <title>N-Gon Games</title>
+
+    <!-- For Mobiles  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/wide.css" id="layout">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/colors/red.css" id="colors">
+
+    <!-- Java Script  -->
+    <script src="js/jquery.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/selectnav.js"></script>
+    <script src="js/flexslider.js"></script>
+    <script src="js/twitter.js"></script>
+    <script src="js/fancybox.js"></script>
+    <script src="js/isotope.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+</head>
+<body>
+
+<!-- Wrapper Start -->
+<div id="wrapper" class="container-fluid">
+
+
+    <!-- Header -->
+
+
+    <div class="ie-dropdown-fix" >
+
+        <!-- Header -->
+        <div class="row-fluid" id="header">
+
+            <!-- Logo -->
+            <div class="span5">
+
+                <a href="#"><img src="images/logo.png" alt="logo" /></a>
+
+            </div>
+
+            <!-- Social / Contact -->
+            <div class="span4 pull-right">
+
+                <!-- Social Icons -->
+                <ul class="social-icons">
+                    <li class="facebook"><a href="#">Facebook</a></li>
+                    <li class="twitter"><a href="https://twitter.com/NgonGames" target="_blank">Twitter</a></li>
+                    <li class="googleplus"><a href="https://plus.google.com/113613364304977949970" target="_blank">Google Plus</a></li>
+                    <li class="youtube"><a href="https://www.youtube.com/NgonGames" target="_blank">YouTube</a></li>
+                    <li class="github"><a href="https://github.com/NGonGames" target="_blank">GitHub</a></li>
+                    <li class="linkedin"><a href="#">LinkedIn</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+        <!-- Header / End -->
+
+        <!-- Navigation -->
+        <div id="navigation" class="margintop">
+            <ul id="nav">
+
+                <li><a href="index.html" class="active">Home</a></li>
+
+                <li><a href="#">Our Games</a></li>
+
+                <li><a href="#">Developer Blog</a></li>
+
+                <li><a href="contact.html">About Us</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+        <div class="nav-shadow"></div>
+        <div class="clear"></div>
+
+    </div>
+    <!-- Navigation / End -->
+
+
+    <!-- Content -->
+
+</div>
+<!-- Wrapper / End -->
+
+<!-- Footer -->
+
+<!-- Footer Top -->
+<div id="footer" class="container-fluid paddingbottom" >
+
+
+    <div class="row-fluid">
+
+        <!-- About -->
+        <div class="span4">
+            <div class="footer-headline"><h4>About Us</h4></div>
+            <p>N-Gon Games was founded in Atlanta, Georgia in 2011 by Tim Frank, Connor McCarthy, and Ajani Thomas. Born from a love for and a desire to create great games, the company has several games in development and scheduled for release this year. N-Gon Games currently works with 9 game developers, including programmers, artists, sound designers, level designers, and scriptwriters.</p>
+        </div>
+
+        <!-- Subscribe  -->
+        <div class="span4">
+            <div class="footer-headline"><h4>Subscribe</h4></div>
+            <p>Get exclusive offers and be the first to know when we release new games.</p>
+            <div class="input-append">
+                <input  id="appendedInputButton"  type="text" class="span7" placeholder="Enter Email Address">
+                <button class="btn" type="button">Subscribe!</button>
+            </div>
+            <p>Your email is safe with us!</p>
+        </div>
+
+        <!-- Latest Tweets -->
+        <div class="span4">
+            <div class="footer-headline"><h4>Latest Tweets <a href="https://twitter.com/NgonGames" target="_blank">@NgonGames</a></h4></div>
+            <ul id="twitter"></ul>
+            <script type="text/javascript">
+                jQuery(document).ready(function($){
+                    $.getJSON('http://api.twitter.com/1/statuses/user_timeline/NgonGames.json?count=3&amp;callback=?', function(tweets){
+                        $("#twitter").html(tz_format_twitter(tweets));
+                    }); });
+            </script>
+            <div class="clear"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer / Bottom -->
+<div id="footer" class="container-fluid" style="background: #111;">
+    <div class="row-fluid">
+        <div class="span12">
+            <div id="footer-bottom">
+                © Copyright 2013 by <a href="#">N-Gon Games LLC</a>. All rights reserved.
+
+                <div id="scroll-top-top"><a href="#" title="Go to Top"></a></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer / End -->
+
+</body>
+
+</html>
